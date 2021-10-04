@@ -41,6 +41,21 @@ export function orderByClassname(cfg) {
   return byClassname;
 }
 
+// Show plugin -> classname mapping
+export function pluginClasses(cfg) {
+  const plugins = {};
+  order
+    .filter((p) => !ignorePlugins.includes(p))
+    .forEach((plugin) => {
+      const name =typeof plugin === 'object' ? plugin.name : plugin;
+      plugins[name] = [];
+      loadPlugin(cfg, plugin, (classname, _) => {
+        plugins[name].push(classname);
+      });
+    });
+  return plugins;
+}
+
 // Load all corePlugins into a map where the key is an alphabetically sorted concatenation of the plugin's properties.
 export function classnameByProperties(cfg) {
   // Ignore zero negative margin classes, translate to the regular margin classes instead.
