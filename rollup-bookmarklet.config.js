@@ -4,7 +4,7 @@ import analyze from 'rollup-plugin-analyzer';
 
 export default {
   input: 'dist/bookmarklet.js',
-  plugins: [commonjs(), terser(), analyze()],
+  plugins: [commonjs(), terser()],
   output: {
     file: 'dist/bookmarklet.bundle.js',
     format: 'iife',

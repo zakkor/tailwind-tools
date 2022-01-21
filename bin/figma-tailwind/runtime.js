@@ -27,7 +27,7 @@ function translate(event) {
 }
 
 function translateAndAttach(hasFontMedium) {
-  const paneEl = document.querySelector('[class*="inspect_panels--tabularInspectionPanel"] > div > div > div > div');
+  const paneEl = document.querySelector('[class*="inspect_panels--tabularInspectionPanel"] > div');
   paneEl.style.display = 'flex';
   paneEl.style.flexDirection = 'column';
 
