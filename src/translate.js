@@ -4,6 +4,7 @@ const defaults = {
   'font-style': 'not-italic',
   'font-weight': 'font-normal',
   'box-sizing': 'box-border',
+  'line-height': 'leading-normal',
   '--tw-bg-opacity': '1',
   '--tw-border-opacity': '1',
   '--tw-text-opacity': '1',

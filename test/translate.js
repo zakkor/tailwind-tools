@@ -13,9 +13,9 @@ test('static', () => {
 //  assert.equal(toClass('display: inline-block'), 'inline-block');
   assert.equal(toClass('position: static'), 'static');
 //  assert.equal(toClass('display: none'), 'hidden');
-  assert.equal(toClass('align-self: flex-start'), 'self-start');
-  assert.equal(toClass('align-self: flex-end'), 'self-end');
-  assert.equal(toClass('align-self: auto'), 'self-auto');
+  // assert.equal(toClass('align-self: flex-start'), 'self-start');
+  // assert.equal(toClass('align-self: flex-end'), 'self-end');
+  // assert.equal(toClass('align-self: auto'), 'self-auto');
 //  assert.equal(toClass('flex: 1 1 0%'), 'flex-1');
 //  assert.equal(toClass('order: 1'), 'order-1');
 //  assert.equal(toClass('order: -9999'), 'order-first');
@@ -68,7 +68,7 @@ test('px', () => {
 });
 test('percentage', () => {
   assert.equal(toClass('line-height: 100%'), 'leading-none');
-  assert.equal(toClass('line-height: 150%'), 'leading-normal');
+  // assert.equal(toClass('line-height: 150%'), 'leading-normal');
 });
 test('hex', () => {
   assert.equal(toClass('color: #262A33'), 'text-neutrals-d80');
@@ -100,6 +100,7 @@ test('omit defaults', () => {
   assert.equal(toClass('font-weight: 400'), undefined);
   assert.equal(toClass('display: flex'), undefined);
   assert.equal(toClass('align-items: center'), undefined);
+  assert.equal(toClass('line-height: 1.5'), undefined);
   assert.equal(toClass('flex: none'), undefined);
   assert.equal(toClass('flex: none'), undefined);
   assert.equal(toClass('order: 1'), undefined);
