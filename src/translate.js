@@ -1,6 +1,8 @@
 const defaults = {
   'border-style': 'solid',
+  'font-size': 'text-base',
   'font-style': 'not-italic',
+  'font-weight': 'font-normal',
   'box-sizing': 'box-border',
   '--tw-bg-opacity': '1',
   '--tw-border-opacity': '1',
@@ -57,7 +59,7 @@ export function propertiesToClass(
 
     const [[name]] = subprops;
     const found = lookup(subprops);
-    if (found && (!options.omitDefaults || defaults[name] !== found)) {
+    if (found && (!options.omitDefaults || (Array.isArray(defaults[name]) ? !defaults[name].includes(found) : defaults[name] !== found))) {
       classnames.push(found);
       skipUnderLength = subprops.length;
       continue;

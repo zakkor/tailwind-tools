@@ -5,7 +5,7 @@ import transformThemeValue from 'tailwindcss/lib/util/transformThemeValue.js';
 import { order } from './sort';
 import { concatProperties } from './translate.js';
 
-const ignorePlugins = ['preflight', 'container'];
+const ignorePlugins = ['preflight', 'container', 'flex', 'order', 'flexGrow', 'textAlign'];
 
 // Map Tailwind class names to their resulting properties.
 export function propertiesByClassname(cfg) {
